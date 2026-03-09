@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SKBA Work Pay</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="phone-frame">
+      <header class="topbar">
+        <div>
+          <div class="top-title">SKBA Work Pay</div>
+          <div class="top-sub">모바일 웹 실사용형</div>
+        </div>
+        <div class="header-right">
+          <span class="badge" id="headerShift">주간</span>
+          <span class="sync-badge local" id="syncBadge">로컬 단독 모드</span>
+        </div>
+      </header>
+
+      <main class="content" id="content"></main>
+
+      <nav class="bottom-nav" id="bottomNav"></nav>
+    </div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
