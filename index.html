@@ -2,30 +2,42 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>SKBA Work Pay</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKBA Smart Work</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
-  <div class="app-shell">
-    <div class="phone-frame">
+  <div id="app" class="app-shell">
+    <section id="login-screen" class="login-screen"></section>
+    <section id="main-screen" class="main-screen hidden">
       <header class="topbar">
         <div>
-          <div class="top-title">SKBA Work Pay</div>
-          <div class="top-sub">모바일 웹 실사용형</div>
+          <div class="brand">SKBA Smart Work</div>
+          <div class="subtitle" id="session-meta"></div>
         </div>
-        <div class="header-right">
-          <span class="badge" id="headerShift">주간</span>
-          <span class="sync-badge local" id="syncBadge">로컬 단독 모드</span>
+        <div class="topbar-actions">
+          <button id="language-toggle" class="ghost-btn"></button>
+          <button id="logout-btn" class="ghost-btn">Logout</button>
         </div>
       </header>
 
-      <main class="content" id="content"></main>
+      <main class="main-layout">
+        <aside class="sidebar">
+          <nav id="nav-menu" class="nav-menu"></nav>
+        </aside>
 
-      <nav class="bottom-nav" id="bottomNav"></nav>
-    </div>
+        <section class="content-area">
+          <div id="page-home" class="page-view"></div>
+          <div id="page-calendar" class="page-view hidden"></div>
+          <div id="page-pay" class="page-view hidden"></div>
+          <div id="page-chat" class="page-view hidden"></div>
+          <div id="page-handover" class="page-view hidden"></div>
+          <div id="page-search" class="page-view hidden"></div>
+          <div id="page-settings" class="page-view hidden"></div>
+        </section>
+      </main>
+    </section>
   </div>
-
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>
